@@ -10,8 +10,7 @@ namespace DierentuinOpdracht.ViewModel
 {
     public class AnimalViewModel : ViewModelBase
     {
-        private readonly Animal animal;
-
+        private Animal animal;
         public AnimalViewModel(Animal animal)
         {
             this.animal = animal;
@@ -22,13 +21,28 @@ namespace DierentuinOpdracht.ViewModel
             get => animal.Name;
             set
             {
-                if (animal.Name != value)
+                if (string.IsNullOrEmpty(value) == false && string.Equals(value, animal.Name))
                 {
                     animal.Name = value;
-                    RaisePropertyChanged();
+                    RaisePropertyChanged(nameof(Name));
                     RaisePropertyChanged(nameof(CanSave));
                 }
             }
+        }
+
+        public int Energy { get => animal.Energy; }
+
+        internal Animal Animal { get => animal; }
+
+        public void Eat()
+        {
+            animal.Eat();
+            RaisePropertyChanged(nameof(Energy));
+        }
+        public void UseEnergy()
+        {
+            animal.UseEnergy();
+            RaisePropertyChanged(nameof(Energy));
         }
 
         public bool CanSave => !string.IsNullOrEmpty(Name);

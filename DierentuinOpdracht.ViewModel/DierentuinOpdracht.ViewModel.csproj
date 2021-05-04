@@ -5,7 +5,8 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\DierentuinOpdracht.Common\DierentuinOpdracht.Common.csproj"/>
+		<ProjectReference Include="..\DierentuinOpdracht.Common\DierentuinOpdracht.Common.csproj" />
+		<ProjectReference Include="..\DierentuinOpdracht.DataAcces\DierentuinOpdracht.DataAcces.csproj" />
 	</ItemGroup>
 	
 </Project>

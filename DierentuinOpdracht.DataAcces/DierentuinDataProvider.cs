@@ -10,10 +10,14 @@ namespace DierentuinOpdracht.DataAcces
 {
     public class DierentuinDataProvider : IDierentuinDataProvider
     {
+        public void AddAnimal()
+        {
+            Debug.WriteLine($"tried to add new Animal");
+        }
+
         public IEnumerable<Animal> LoadAnimals()
         {
-            List<Animal> Animals = new List<Animal>();
-            List<Lion> Lions = new List<Lion>
+            List<Animal> Animals = new List<Animal>
             {
                 new Lion
                 {
@@ -29,10 +33,7 @@ namespace DierentuinOpdracht.DataAcces
                 {
                     Name = "Leeuw 3",
                     Energy = 100
-                }
-            };
-            List<Elephant> Elephants = new List<Elephant>
-            {
+                },
                 new Elephant
                 {
                     Name = "Elephant 1",
@@ -47,10 +48,7 @@ namespace DierentuinOpdracht.DataAcces
                 {
                     Name = "Elephant 3",
                     Energy = 100
-                }
-            };
-            List<Monkey> Monkeys = new List<Monkey>
-            {
+                },
                 new Monkey
                 {
                     Name = "Monkey 1",
@@ -67,19 +65,6 @@ namespace DierentuinOpdracht.DataAcces
                     Energy = 100
                 }
             };
-
-            foreach (var Lion in Lions)
-            {
-                Animals.Add(Lion);
-            }
-            foreach (var Elephant in Elephants)
-            {
-                Animals.Add(Elephant);
-            }
-            foreach (var Monkey in Monkeys)
-            {
-                Animals.Add(Monkey);
-            }
 
             return Animals;
         }

@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace DierentuinOpdracht.DataAcces
 {
-    interface IDierentuinDataProvider
+    public interface IDierentuinDataProvider
     {
         IEnumerable<Animal> LoadAnimals();
         void SaveAnimal(Animal animal);
+        void AddAnimal();
     }
 }
