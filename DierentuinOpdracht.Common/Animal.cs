@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace DierentuinOpdracht.Common
 {
-    public class Animal
+    public abstract class Animal
     {
+        private const int energyInitial = 100;
+        private const int energyAddition = 25;
+
         public string Name { get; set; }
         public int Energy { get; set; }
 
+        protected Animal()
+        {
+            Energy = energyInitial;
+        }
+
         public void Eat()
         {
-            Energy += 25;
+            Energy += energyAddition;
         }
+
+        public abstract void UseEnergy();
     }
 }

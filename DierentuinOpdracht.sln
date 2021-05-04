@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DierentuinOpdracht.Wpf", "DierentuinOpdrachtOefenProject\DierentuinOpdracht.Wpf.csproj", "{57C0F9E0-1AD4-4BEF-A610-C3B5E473A8A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DierentuinOpdracht.Wpf", "DierentuinOpdrachtOefenProject\DierentuinOpdracht.Wpf.csproj", "{57C0F9E0-1AD4-4BEF-A610-C3B5E473A8A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DierentuinOpdracht.Common", "DierentuinOpdracht.Common\DierentuinOpdracht.Common.csproj", "{8359B976-297C-4DFC-A422-49397F28B5CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DierentuinOpdracht.Common", "DierentuinOpdracht.Common\DierentuinOpdracht.Common.csproj", "{8359B976-297C-4DFC-A422-49397F28B5CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DierentuinOpdracht.ViewModel", "DierentuinOpdracht.ViewModel\DierentuinOpdracht.ViewModel.csproj", "{B62D9D89-0444-4D86-B6B2-685190135104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DierentuinOpdracht.DataAcces", "DierentuinOpdracht.DataAcces\DierentuinOpdracht.DataAcces.csproj", "{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8359B976-297C-4DFC-A422-49397F28B5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8359B976-297C-4DFC-A422-49397F28B5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8359B976-297C-4DFC-A422-49397F28B5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B62D9D89-0444-4D86-B6B2-685190135104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62D9D89-0444-4D86-B6B2-685190135104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62D9D89-0444-4D86-B6B2-685190135104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62D9D89-0444-4D86-B6B2-685190135104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
