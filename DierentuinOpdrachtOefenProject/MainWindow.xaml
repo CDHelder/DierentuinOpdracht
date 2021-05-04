@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DierentuinOpdrachtOefenProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -19,11 +19,11 @@
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="175"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--GreenStripe-->
         <Grid Grid.Row="1" Grid.Column="1">
             <Border Background="#228B22">
-                
+
             </Border>
         </Grid>
         <!--GreenStripe 2-->
@@ -41,7 +41,7 @@
                 </StackPanel>
             </Border>
         </Grid>
-        
+
         <!--ListArea-->
         <Grid Grid.Row="1" Background="#B0E1B0">
             <Grid.RowDefinitions>
@@ -58,7 +58,7 @@
                 <ListView Margin="8" Background="#CDEBCD"/>
             </Grid>
         </Grid>
-        
+
         <!--MainArea-->
         <Grid Grid.Row="1" Grid.Column="2" Background="#B0E1B0">
             <Grid.RowDefinitions>
@@ -72,13 +72,13 @@
             <TextBlock Text="Name" FontSize="20" Margin="8,8,0,0"/>
             <TextBox Grid.Row="1" Height="28" Width="300" FontSize="20" 
                      HorizontalAlignment="Left" Margin="8,8,0,0"/>
-            
+
             <TextBlock Grid.Row="2"  Text="Energy" FontSize="20" Margin="8,24,0,0"/>
             <TextBlock Grid.Row="3" Height="28" Width="300" FontSize="20" 
                      HorizontalAlignment="Left" Margin="8,8,0,0"
                        Text="Over 9000"/>
         </Grid>
-        
+
         <!--RightArea-->
         <Grid Grid.Row="1" Grid.Column="5" Background="#B0E1B0">
             <Grid.RowDefinitions>
@@ -96,13 +96,44 @@
             <Button Height="32" Margin="8" Grid.Row="3" Content="Elephants" FontSize="20"/>
             <Button Height="32" Margin="8" Grid.Row="5" Content="All Animals" FontSize="20"/>
         </Grid>
-        
-        <!--DownArea-->
-        <Grid Grid.Row="3" Grid.ColumnSpan="5">
-            <Border Background="#228B22">
 
-            </Border>
+        <!--DownArea-->
+        <Grid Grid.Row="3" Grid.ColumnSpan="5" Background="#228B22">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <TextBlock Text="Use energy every" FontSize="25" HorizontalAlignment="Center" Margin="0,5,0,5"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <TextBox Margin="5" Text="500" FontSize="25" Name="MillisecondsInput"
+                           PreviewTextInput="MillisecondsInput_PreviewTextInput"/>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <TextBlock Text="Milliseconds" FontSize="25" Margin="0,5,0,5" />
+            </Grid>
+
+            <Grid Grid.Column="3">
+                <Button Width="100" Margin="5" HorizontalAlignment="Right" Content="Start" FontSize="25"/>
+            </Grid>
+
+            <Grid Grid.Column="4">
+                <TextBlock Text="0" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            
+            <Grid Grid.Column="5">
+                <Button Width="100" Margin="5" HorizontalAlignment="Right" Content="Stop" FontSize="25"/>
+            </Grid>
+
         </Grid>
-        
+
     </Grid>
 </Window>

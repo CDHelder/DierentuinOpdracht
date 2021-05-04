@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DierentuinOpdracht.ViewMode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DierentuinOpdracht.DataAcces", "DierentuinOpdracht.DataAcces\DierentuinOpdracht.DataAcces.csproj", "{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DierentuinOpdracht.UnitTests", "DierentuinOpdracht.UnitTests\DierentuinOpdracht.UnitTests.csproj", "{7F0A7B92-BDA2-4977-B87D-A97843641391}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0FA0D8-14A6-4D65-8838-5BE51C51A124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F0A7B92-BDA2-4977-B87D-A97843641391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F0A7B92-BDA2-4977-B87D-A97843641391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F0A7B92-BDA2-4977-B87D-A97843641391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F0A7B92-BDA2-4977-B87D-A97843641391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
