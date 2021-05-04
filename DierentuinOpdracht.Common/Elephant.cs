@@ -17,7 +17,7 @@ namespace DierentuinOpdracht.Common
             Name = nameElephant;
         }
 
-        public new void Eat()
+        public override void Eat()
         {
             Energy += energyAddition;
         }

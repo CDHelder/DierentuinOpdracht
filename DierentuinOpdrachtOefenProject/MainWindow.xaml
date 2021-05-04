@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DierentuinOpdrachtOefenProject"
+        xmlns:local="clr-namespace:DierentuinOpdrachtOefenProject" xmlns:viewmodel="clr-namespace:DierentuinOpdracht.ViewModel;assembly=DierentuinOpdracht.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:AnimalListViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -50,12 +50,12 @@
             </Grid.RowDefinitions>
 
             <Grid>
-                <Button Margin="8,8,95,8" Content="Refresh" Background="#CDEBCD"/>
-                <Button Margin="93,8,10,8" Content="Create New" Background="#CDEBCD"/>
+                <Button Margin="8,8,95,8" Content="Refresh" Background="#CDEBCD" Command="{Binding Reload}"/>
+                <Button Margin="93,8,10,8" Content="Create New" Background="#CDEBCD" Command="{Binding AddNew}"/>
             </Grid>
 
             <Grid Grid.Row="1">
-                <ListView Margin="8" Background="#CDEBCD"/>
+                <ListView Margin="8" Background="#CDEBCD" ItemsSource="{Binding Animals}" SelectedItem="{Binding SelectedAnimal, Mode=TwoWay}" DisplayMemberPath="Name"/>
             </Grid>
         </Grid>
         
@@ -71,12 +71,13 @@
 
             <TextBlock Text="Name" FontSize="20" Margin="8,8,0,0"/>
             <TextBox Grid.Row="1" Height="28" Width="300" FontSize="20" 
-                     HorizontalAlignment="Left" Margin="8,8,0,0"/>
+                     HorizontalAlignment="Left" Margin="8,8,0,0"
+                     Text="{Binding SelectedAnimal.Name}" />
             
             <TextBlock Grid.Row="2"  Text="Energy" FontSize="20" Margin="8,24,0,0"/>
             <TextBlock Grid.Row="3" Height="28" Width="300" FontSize="20" 
                      HorizontalAlignment="Left" Margin="8,8,0,0"
-                       Text="Over 9000"/>
+                     Text="{Binding SelectedAnimal.Energy}"/>
         </Grid>
         
         <!--RightArea-->
@@ -91,10 +92,10 @@
             </Grid.RowDefinitions>
 
             <TextBlock Margin="4" Text="Feed All" FontSize="24" HorizontalAlignment="Center"/>
-            <Button Height="32" Margin="8" Grid.Row="1" Content="Lions" FontSize="20"/>
-            <Button Height="32" Margin="8" Grid.Row="2" Content="Monkeys" FontSize="20"/>
-            <Button Height="32" Margin="8" Grid.Row="3" Content="Elephants" FontSize="20"/>
-            <Button Height="32" Margin="8" Grid.Row="5" Content="All Animals" FontSize="20"/>
+            <Button Height="32" Margin="8" Grid.Row="1" Content="Lions" FontSize="20" Command="{Binding FeedLions}"/>
+            <Button Height="32" Margin="8" Grid.Row="2" Content="Monkeys" FontSize="20" Command="{Binding FeedMonkeys}"/>
+            <Button Height="32" Margin="8" Grid.Row="3" Content="Elephants" FontSize="20" Command="{Binding FeedElephants}"/>
+            <Button Height="32" Margin="8" Grid.Row="5" Content="All Animals" FontSize="20" Command="{Binding FeedAllAnimals}"/>
         </Grid>
         
         <!--DownArea-->

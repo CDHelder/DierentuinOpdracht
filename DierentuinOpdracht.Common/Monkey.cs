@@ -19,7 +19,7 @@ namespace DierentuinOpdracht.Common
             Energy = energyInitial;
         }
 
-        public new void Eat()
+        public override void Eat()
         {
             Energy += energyAddition;
         }

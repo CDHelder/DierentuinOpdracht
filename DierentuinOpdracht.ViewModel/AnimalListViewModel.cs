@@ -62,7 +62,6 @@ namespace DierentuinOpdracht.ViewModel
                 if (maybeAnimal != null)
                 {
                     action(maybeAnimal);
-                    
                 }
             }
         }

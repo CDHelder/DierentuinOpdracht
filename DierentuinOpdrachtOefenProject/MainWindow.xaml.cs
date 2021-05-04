@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DierentuinOpdracht.DataAcces;
+using DierentuinOpdracht.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,21 @@ namespace DierentuinOpdrachtOefenProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        private AnimalListViewModel _viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+            _viewModel = new AnimalListViewModel(new DierentuinDataProvider());
+            DataContext = _viewModel;
+            Loaded += MainWindow_Loaded;
+        }
+
+        public AnimalListViewModel ViewModel { get; }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            _viewModel.Load();
         }
     }
 }
