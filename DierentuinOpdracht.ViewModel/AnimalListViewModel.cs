@@ -87,9 +87,6 @@ namespace DierentuinOpdracht.ViewModel
                 Animals.Add(new AnimalViewModel(animal));                
             }
             RaisePropertyChanged(nameof(Animals));
-
-            //TODO: remove next line, testing only
-            _SelectedAnimal = Animals.FirstOrDefault();
         }
         private void AddNewMethod()
         {
