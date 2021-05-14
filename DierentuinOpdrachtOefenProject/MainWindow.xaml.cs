@@ -54,6 +54,7 @@ namespace DierentuinOpdrachtOefenProject
         private int increment = 0;
         private void Dt_Tick(object sender, EventArgs e)
         {
+            _viewModel.UseEnergyAllAnimals();
             increment++;
             CounterLabel.Text = increment.ToString();
         }

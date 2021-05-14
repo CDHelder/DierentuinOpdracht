@@ -43,7 +43,10 @@ namespace DierentuinOpdracht.ViewModel
         public ICommand FeedLions { get => new Command(FeedAnimals<Lion>); }
         public ICommand FeedMonkeys { get => new Command(FeedAnimals<Monkey>); }
         public ICommand FeedAllAnimals { get => new Command(FeedAnimals<Animal>); }
-        public ICommand UseEnergyAllAnimals { get => new Command(UseEnergyAnimals<Animal>); }
+        public void UseEnergyAllAnimals()
+        {
+            UseEnergyAnimals<Animal>();
+        }
 
         private void FeedAnimals<T>() where T : Animal
         {
